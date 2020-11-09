@@ -75,8 +75,7 @@ enum rkcif_chip_id {
 	CHIP_PX30_CIF,
 	CHIP_RK1808_CIF,
 	CHIP_RK3128_CIF,
-	CHIP_RK3288_CIF,
-	CHIP_RK3328_CIF,
+	CHIP_RK3288_CIF
 };
 
 enum host_type_t {

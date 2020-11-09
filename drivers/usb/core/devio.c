@@ -2575,9 +2575,7 @@ static unsigned int usbdev_poll(struct file *file,
 	if (file->f_mode & FMODE_WRITE && !list_empty(&ps->async_completed))
 		mask |= POLLOUT | POLLWRNORM;
 	if (!connected(ps))
-		mask |= POLLHUP;
-	if (list_empty(&ps->list))
-		mask |= POLLERR;
+		mask |= POLLERR | POLLHUP;
 	return mask;
 }
 

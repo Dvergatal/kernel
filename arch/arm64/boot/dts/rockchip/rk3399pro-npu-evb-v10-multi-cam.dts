@@ -377,33 +377,15 @@
 };
 
 &pinctrl {
-	vdd-npu-sleep {
-		vsel_gpio: vsel-gpio {
-			rockchip,pins =
-				<0 RK_PC6 0 &pcfg_pull_down>;
-		};
+	vsel_gpio: vsel-gpio {
+		rockchip,pins =
+			<0 RK_PC6 0 &pcfg_pull_down>;
 	};
 
-	key {
-		pwr_key: pwr-key {
-			rockchip,pins =
-				<0 RK_PB0 0 &pcfg_pull_none>;
-		};
+	pwr_key: pwr-key {
+		rockchip,pins =
+			<0 RK_PB0 0 &pcfg_pull_none>;
 	};
-
-	rockchip-suspend {
-		clk_gpio: clk-gpio {
-			rockchip,pins =
-				<0 RK_PC2 0 &pcfg_pull_down>;
-		};
-	};
-};
-
-&rockchip_suspend {
-	status = "okay";
-	rockchip,sleep-debug-en = <1>;
-	pinctrl-names = "default";
-	pinctrl-0 = <&clk_gpio>;
 };
 
 &vop_raw {

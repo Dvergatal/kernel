@@ -30,8 +30,8 @@
 
 &thermal_zones {
 	soc-thermal {
-		sustainable-power = <422>;
-		k_pu = <6>;
+		sustainable-power = <308>;
+		k_pu = <8>;
 		k_po = <1024>;
 		k_i = <0>;
 
